@@ -1,6 +1,6 @@
 {
   "name": "Yggdrasil via `localhost:8080`",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Proxy via `localhost:8080` if the domain can't be resolved or if the resolved IP is not in Yggdrasils `0200::/7` network range.",
   "permissions": [
     "proxy"
