@@ -27,9 +27,11 @@ sudo apt install -y yggdrasil dirmngr
 
 sudo systemctl enable yggdrasil
 sudo systemctl start yggdrasil
+```
+### Install a helper service
+Install a restart script that tries to restart the Yggdrasil service every 4 seconds until the interface comes up and exits.
 
-# Install a restart script that tries to restart the Yggdrasil
-# service every 4 seconds until the interface comes up
+```
 sudo cat << EOF | sudo tee -a /etc/systemd/system/start-yggdrasil.service
 [Unit]
 Description=Start yggdrasil when the tun device is added
@@ -55,6 +57,7 @@ fi
 
 exit 0
 EOF
+
 sudo chmod +x /usr/local/bin/start-yggdrasil
 sudo systemctl enable start-yggdrasil.service
 ```
