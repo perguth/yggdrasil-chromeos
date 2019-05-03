@@ -29,7 +29,7 @@ sudo systemctl enable yggdrasil
 sudo systemctl start yggdrasil
 ```
 ### Install a helper service
-Install a restart script that tries to restart the Yggdrasil service every 4 seconds until the interface comes up and exits.
+**Optional:** Install a restart script that tries to restart the Yggdrasil service every 4 seconds until the interface comes up and exits.
 
 ```
 sudo cat << EOF | sudo tee -a /etc/systemd/system/start-yggdrasil.service
