@@ -13,18 +13,65 @@ While enabled Yggrasil IPs like `[21f:dd73:7cdb:773b:a924:7ec0:800b:221e]` and d
 ## Prerequisites
 
 ### Install Yggdrasil
-Install Yggdrasil: https://yggdrasil-network.github.io/installation-linux-deb.html It won't work yet though.
+Install Yggdrasil (see https://yggdrasil-network.github.io/installation-linux-deb.html):
+```
+# Add apt repository
+# https://yggdrasil-network.github.io/installation-linux-deb.html
+gpg --fetch-keys https://neilalexander.s3.eu-west-2.amazonaws.com/deb/key.txt
+gpg --export 569130E8CA20FBC4CB3FDE555898470A764B32C9 | sudo apt-key add -
+echo 'deb http://neilalexander.s3.eu-west-2.amazonaws.com/deb/ debian yggdrasil' | sudo tee /etc/apt/sources.list.d/yggdrasil.list
 
-Press `CTRL + ALT + t` (while focusing a Chrome tab) and enter `vmc start termina` followed by `lxc config device add penguin tun unix-char path=/dev/net/tun`. You have to redo this after every restart.
+# Install Yggdrasil and its dependency
+sudo apt update
+sudo apt install -y yggdrasil dirmngr
 
-Add peers https://github.com/yggdrasil-network/public-peers
+sudo systemctl enable yggdrasil
+sudo systemctl start yggdrasil
 
-Now start Yggdrasil: `sudo service yggdrasil restart`
+# Install a restart script that tries to restart the Yggdrasil
+# service every 4 seconds until the interface comes up
+sudo cat << EOF | sudo tee -a /etc/systemd/system/start-yggdrasil.service
+[Unit]
+Description=Start yggdrasil when the tun device is added
 
-Verify it worked by looking at the active connections: `sudo yggdrasilctl getpeers`.
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=4
+ExecStart=/usr/local/bin/start-yggdrasil
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo cat << EOF | sudo tee -a /usr/local/bin/start-yggdrasil
+#!/bin/sh
+
+if ! ip a show tun0 up
+then
+  service yggdrasil restart
+  exit 1
+fi
+
+exit 0
+EOF
+sudo chmod +x /usr/local/bin/start-yggdrasil
+sudo systemctl enable start-yggdrasil.service
+```
+
+### Prepare ChromeOS
+**You have to redo this after every restart.**
+
+- Press `CTRL + ALT + t` (while focusing a Chrome tab) and
+- enter `vmc start termina` followed by
+- `lxc config device add penguin tun unix-char path=/dev/net/tun`.
+
+## Configure Yggdrasil
+- Add peers https://github.com/yggdrasil-network/public-peers
+- Make Yggdrasil reload: `sudo service yggdrasil reload`
+- Verify it worked by looking at the active connections: `sudo yggdrasilctl getpeers`.
 
 ### Install Tinyproxy
-Install tinyproxy: `sudo apt install -y tinyproxy`
-
-Edit `/etc/tinyproxy/tinyproxy.conf` and set Port to `8080`. Advised: Set `Allow` to `127.0.0.1`. Reload Tinyproxy: `sudo service tinyproxy reload`
-
+- Install tinyproxy: `sudo apt install -y tinyproxy`
+- Edit `/etc/tinyproxy/tinyproxy.conf` and set Port to `8080` (*Advised:* Set `Allow` to `127.0.0.1`).
+- Reload Tinyproxy: `sudo service tinyproxy reload`
