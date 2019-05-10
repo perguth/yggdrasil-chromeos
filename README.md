@@ -1,6 +1,6 @@
 # yggdrasil-chromeos
 
-> Proxy via localhost:8080 if the domain can't be resolved or if the resolved IP is not in Yggdrasils 0200::/7 network range.
+> Proxy via `localhost:8080` if the domain can't be resolved or if the resolved IP is not in Yggdrasils `0200::/7` network range.
 
 🔖 **https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec**
 
