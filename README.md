@@ -80,3 +80,9 @@ sudo systemctl enable start-yggdrasil.service
 - Install tinyproxy: `sudo apt install -y tinyproxy`
 - Edit `/etc/tinyproxy/tinyproxy.conf` and set Port to `8080` (*Advised:* Set `Allow` to `127.0.0.1`).
 - Reload Tinyproxy: `sudo service tinyproxy reload`
+
+### Test
+
+Copy the IPv6 and open it in Chrome: `[21f:dd73:7cdb:773b:a924:7ec0:800b:221e]` You should see an interactive map of nodes.
+
+🌳
