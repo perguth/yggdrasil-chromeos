@@ -84,5 +84,3 @@ sudo systemctl enable start-yggdrasil.service
 ### Test
 
 Copy the IPv6 and open it in Chrome: `[21f:dd73:7cdb:773b:a924:7ec0:800b:221e]` You should see an interactive map of nodes.
-
-🌳
