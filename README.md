@@ -78,7 +78,7 @@ sudo systemctl enable start-yggdrasil.service
 
 ### Install Tinyproxy
 - Install tinyproxy: `sudo apt install -y tinyproxy`
-- Edit `/etc/tinyproxy/tinyproxy.conf` and set Port to `8080` (*Advised:* Set `Allow` to `127.0.0.1`).
+- Edit `/etc/tinyproxy/tinyproxy.conf` and set `Port` to `8080` and `Allow` to `127.0.0.1`.
 - Reload Tinyproxy: `sudo service tinyproxy reload`
 
 ### Test
