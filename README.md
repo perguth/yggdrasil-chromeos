@@ -1,6 +1,6 @@
 # yggdrasil-chromeos
 
-> Proxy via `localhost:8080` if the domain can't be resolved or if the resolved IP is not in [Yggdrasils](https://yggdrasil-network.github.io/) `0200::/7` network range.
+> Proxy via `localhost:8080` if the domain can't be resolved or if the resolved IP is not in [Yggdrasils](https://yggdrasil-network.github.io/) [`0200::/7`](https://yggdrasil-network.github.io/2018/07/28/addressing.html) network range.
 
 🔖 **[chrome.google.com/webstore/](https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec)**
 
@@ -10,7 +10,7 @@
 
 The Chrome Extension icon can be clicked. A standing `Y` indicates that forwarding to Tinyproxy is enabled.
 
-While enabled Yggrasil IPs like [`http://[21f:dd73:7cdb:773b:a924:7ec0:800b:221e]`](http://[21f:dd73:7cdb:773b:a924:7ec0:800b:221e]) and domains with Yggdrasil AAAA records like [y.thingylabs.io](http://y.thingylabs.io) will be proxied by the local Tinyproxy to the Yggdrasil network.
+While enabled Yggrasil IPs like [`http://[21f:dd73:7cdb:773b:a924:7ec0:800b:221e]`](http://[21f:dd73:7cdb:773b:a924:7ec0:800b:221e]) and domains with Yggdrasil `AAAA` records like [y.thingylabs.io](http://y.thingylabs.io) will be proxied by the local Tinyproxy to the Yggdrasil network.
 
 ## Prerequisites
 
