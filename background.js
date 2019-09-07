@@ -9,7 +9,7 @@ function FindProxyForURL (url, host) {
   // If not resolvable send to proxy
   // The proxy respects /etc/hosts
   if (!ip) {
-    return 'PROXY localhost:8080;'
+    return 'PROXY localhost:8888;'
   }
 
   // Do not proxy IPv4 addresses
