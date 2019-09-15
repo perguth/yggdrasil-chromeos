@@ -1,7 +1,7 @@
 {
-  "name": "Yggdrasil via `localhost:8008`",
-  "version": "3.0.0",
-  "description": "Proxy via `localhost:8008` if the domain can't be resolved or if the resolved IP is not in Yggdrasils `0200::/7` network range.",
+  "name": "Yggdrasil on ChromeOS",
+  "version": "4.0.0",
+  "description": "Access the Yggdrasil network on ChromeOS.",
   "permissions": [
     "proxy"
   ],
