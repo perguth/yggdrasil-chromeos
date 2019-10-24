@@ -20,6 +20,8 @@ Have [Yggdrasil](https://yggdrasil-network.github.io/) installed.
 - Change proxy port: `sudo sed -i 's/8118/8008/g' /etc/privoxy/config`.
 - Restart Privoxy: `sudo service privoxy restart`
 
+Install the [Chrome Extension](https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec).
+
 ### Test
 
 Copy the IPv6 and open it in Chrome: `[21f:dd73:7cdb:773b:a924:7ec0:800b:221e]`
