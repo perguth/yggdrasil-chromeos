@@ -18,7 +18,7 @@ Have [Yggdrasil](https://yggdrasil-network.github.io/) installed.
 - Change proxy port: `sudo sed -i 's/8118/8008/g' /etc/privoxy/config`.
 - Restart Privoxy: `sudo service privoxy restart`
 
-🔖 Install the **[Chrome Extension](https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec)**.
+🔖 **Install the [Chrome Extension](https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec)**.
 
 ### Test
 
