@@ -2,8 +2,6 @@
 
 > Proxy via `localhost:8008` if the domain can't be resolved or if the resolved IP is not in [Yggdrasils](https://yggdrasil-network.github.io/) [`0200::/7`](https://yggdrasil-network.github.io/2018/07/28/addressing.html) network range.
 
-🔖 **Install:** **[chrome.google.com/webstore/](https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec)**
-
 ![Yggdrasil tree](screenshot.png)
 
 ## Usage
@@ -20,7 +18,7 @@ Have [Yggdrasil](https://yggdrasil-network.github.io/) installed.
 - Change proxy port: `sudo sed -i 's/8118/8008/g' /etc/privoxy/config`.
 - Restart Privoxy: `sudo service privoxy restart`
 
-Install the [Chrome Extension](https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec).
+🔖 **Install:** **[chrome.google.com/webstore/](https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec)**
 
 ### Test
 
