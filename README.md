@@ -12,9 +12,9 @@ When active Yggrasil IPs like [`http://[21f:dd73:7cdb:773b:a924:7ec0:800b:221e]`
 
 ## Installation
 
-⚠️ Have **[`Yggdrasil`](https://yggdrasil-network.github.io/installation.html)** installed. You can use [ygg.thingylabs.io](https://ygg.thingylabs.io/) for peering or pick one from the [Ygg public peers list](https://github.com/yggdrasil-network/public-peers).
+Have **[`Yggdrasil`](https://yggdrasil-network.github.io/installation.html)** installed. You can use [ygg.thingylabs.io](https://ygg.thingylabs.io/) for peering or pick one from the [Ygg public peers list](https://github.com/yggdrasil-network/public-peers).
 
-🔧 Set up **[`Privoxy`](https://www.privoxy.org/)**:
+Set up **[`Privoxy`](https://www.privoxy.org/)**:
 - Install Privoxy: `sudo apt install -y privoxy`
 - Change proxy port: `sudo sed -i 's/8118/8008/g' /etc/privoxy/config`.
 - Restart Privoxy: `sudo service privoxy restart`
