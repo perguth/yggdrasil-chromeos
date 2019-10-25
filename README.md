@@ -23,4 +23,4 @@ Set up **[Privoxy](https://www.privoxy.org/)**:
 
 ### Test
 
-Try this Ygg only URL: https://y.thingylabs.io/ 🚀
+Try this Ygg only URL: https://y.thingylabs.io 🚀
