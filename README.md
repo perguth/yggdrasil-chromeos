@@ -12,6 +12,6 @@ The **extension icon** is **clickable** (next to the URL input field) and **togg
 ## Test
 
 - ***Functionality:*** Try a **Yggdrasil-only** URL like **`🚀`[`ygg.tlbs.ai`](https://ygg-only.tlbs.ai)**
-- ***Speed:*** Perform a speedtest in a Terminal by running:\
+- ***Speed:*** Perform a speedtest in a [Terminal](https://support.google.com/chromebook/thread/565904) by running:\
   `iperf3 -c ygg-only.tlbs.ai`\
     <sup>(**Note:** Results are publicly shown on [ygg.tlbs.ai](https://ygg.tlbs.ai))</sup>
