@@ -6,7 +6,7 @@ The **extension icon** is **clickable** (next to the URL input field) and **togg
 
 ## Install
 
-1. **First run** the **[ChromeOS Playbook](https://github.com/perguth/chromeos-playbook)**.
+1. **First run** the **[Chrome OS Playbook](https://github.com/perguth/chromeos-playbook)**.
 2. **Then install** the **[Chrome extension](https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec)**.
 
 ## Test
