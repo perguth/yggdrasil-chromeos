@@ -10,11 +10,11 @@ When active Yggrasil IPs like [`http://[21f:dd73:7cdb:773b:a924:7ec0:800b:221e]`
 
 ## Install
 
-🔖 **First install** dependencies using the **[ChromeOS Playbook](https://github.com/perguth/chromeos-playbook)**.
-
-🔖 **Then install** the **[Chrome extension](https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec)**.
+1. **First install** dependencies using the **[ChromeOS Playbook](https://github.com/perguth/chromeos-playbook)**.
+2. **Then install** the **[Chrome extension](https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec)**. 🔖
 
 ## Test
 
 - **Functionality:** Try a **Yggdrasil-only** URL like 🚀 **[ygg.tlbs.ai](https://ygg.tlbs.ai)**
-- **Speed:** Perform a speedtest in a Terminal by running: `iperf3 -c ygg.tlbs.ai`
+- **Speed:** Perform a speedtest in a Terminal by running:\
+  `iperf3 -c ygg.tlbs.ai`
