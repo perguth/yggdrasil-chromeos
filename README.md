@@ -15,6 +15,6 @@ When active Yggrasil IPs like [`http://[21f:dd73:7cdb:773b:a924:7ec0:800b:221e]`
 
 ## Test
 
-- **Functionality:** Try a **Yggdrasil-only** URL like 🚀 **[ygg.tlbs.ai](https://ygg.tlbs.ai)**
+- **Functionality:** Try a **Yggdrasil-only** URL like 🚀 **[ygg.tlbs.ai](https://ygg-only.tlbs.ai)**
 - **Speed:** Perform a speedtest in a Terminal by running:\
   `iperf3 -c ygg.tlbs.ai`
