@@ -12,7 +12,7 @@ echo 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' | sudo te
 sudo apt update && sudo apt install -y ansible
 
 # Clone repository
-git clone https://github.com/perguth/chromeos-developer-setup.git
+git clone https://github.com/perguth/yggdrasil-chromeos.git
 cd chromeos-developer-setup
 
 # Run playbook
