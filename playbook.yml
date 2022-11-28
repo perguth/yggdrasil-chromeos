@@ -1,0 +1,43 @@
+---
+
+- name: 'This will compute a while. Good read: https://mafinto.sh/blog/'
+  hosts: localhost
+  connection: local
+
+  become: true
+  tasks:
+
+  - block: # Yggdrasil Network
+    - name: '[Yggdrasil] Add GPG key'
+      apt_key:
+        url: https://neilalexander.s3.dualstack.eu-west-2.amazonaws.com/deb/key.txt
+        id: 569130E8CA20FBC4CB3FDE555898470A764B32C9
+    - name: '[Yggdrasil] Add repository'
+      apt_repository:
+        repo: deb http://neilalexander.s3.dualstack.eu-west-2.amazonaws.com/deb/ debian yggdrasil
+        filename: yggdrasil
+        update_cache: no
+    - name: '[Yggdrasil] Install'
+      apt: update_cache=yes name=yggdrasil
+    - name: '[Yggdrasil] Enable and start service'
+      systemd:
+        name: yggdrasil
+        enabled: yes
+        state: started
+    - name: '[Yggdrasil] Clean up `/etc/yggdrasil.conf`'
+      shell: sed '/^[[:blank:]]*#/d;s/#.*//' /etc/yggdrasil.conf | sudo tee /etc/yggdrasil.conf > /dev/null
+      args:
+        warn: false
+
+  - block: # Privoxy
+    - name: '[Privoxy] Install and set up for https://github.com/perguth/yggdrasil-chromeos'
+      apt: update_cache=yes state=present name=privoxy
+    - name: '[Privoxy] Change port to :8008'
+      replace:
+        path: /etc/privoxy/config
+        regexp: '8118'
+        replace: '8008'
+    - name: '[Privoxy] Restart service'
+      systemd:
+        name: privoxy
+        state: restarted
