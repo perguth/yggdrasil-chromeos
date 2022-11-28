@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Clean up
-trap "cd .. && rm -rf chromeos-developer-setup" EXIT
+trap "cd .. && rm -rf yggdrasil-chromeos" EXIT
   
 # Temporary bugfix as of `02/28/2020`
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13
@@ -13,7 +13,7 @@ sudo apt update && sudo apt install -y ansible
 
 # Clone repository
 git clone https://github.com/perguth/yggdrasil-chromeos.git
-cd chromeos-developer-setup
+cd yggdrasil-chromeos
 
 # Run playbook
 ansible-playbook playbook.yml
