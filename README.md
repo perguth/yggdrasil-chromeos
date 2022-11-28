@@ -12,12 +12,3 @@ The **extension icon** is **clickable** (next to the URL input field) and **togg
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-developer-setup/master/setup.sh)"
 ```
-
-Yggdrasil is not connected to the network yet. [Public peers](https://github.com/yggdrasil-network/public-peers) can be added manually but [be aware of security implications](https://yggdrasil-network.github.io/faq.html#will-my-machine-be-exposed-to-other-users-of-the-network) if you open local ports.
-
-## Test
-
-- ***Functionality:*** Try a **Yggdrasil-only** URL like **`🚀`[`ygg.tlbs.ai`](https://ygg-only.tlbs.ai)**
-- ***Speed:*** Perform a speedtest in a [Terminal](https://support.google.com/chromebook/thread/565904) by running:\
-  `iperf3 -c ygg-only.tlbs.ai`\
-    <sup>(**Note:** Results are publicly shown on [ygg.tlbs.ai](https://ygg.tlbs.ai))</sup>
