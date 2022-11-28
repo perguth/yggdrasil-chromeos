@@ -5,7 +5,7 @@
 ## Install
 
 1. **Install** the **[Chrome extension](https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec)** \
-  The extension icon is clickable (next to the URL input field) and switches the extension on and off.
+  The extension icon is clickable and switches the extension on and off.
 3. **Copy** the following commands into **[`🔣 termina`](https://support.google.com/chromebook/thread/565904)**:
 
 ```bash
