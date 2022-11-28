@@ -10,7 +10,7 @@ The **extension icon** is **clickable** (next to the URL input field) and **togg
 1. **Copy** the following commands into **[`🔣 termina`](https://support.google.com/chromebook/thread/565904)**:
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-developer-setup/master/setup.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/yggdrasil-chromeos/master/setup.sh)"
 ```
 
 Yggdrasil is not connected to any peers or the Yggdrasil public network yet!
