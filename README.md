@@ -1,4 +1,4 @@
-# Access Yggdrasil websites on [Chrome OS](https://www.google.com/chromebook/chrome-os)
+# Access Yggdrasil websites on Chrome OS
 
 > This **Chrome extension** allows for **access** to the **[Yggdrasil network](https://yggdrasil-network.github.io/)** ([`0200::/7`](https://yggdrasil-network.github.io/2018/07/28/addressing.html)) via Google Chrome on Chrome OS.
 
