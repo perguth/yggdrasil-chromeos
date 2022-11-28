@@ -6,8 +6,14 @@ The **extension icon** is **clickable** (next to the URL input field) and **togg
 
 ## Install
 
-1. **First run** the **[Chrome OS Playbook](https://github.com/perguth/chromeos-playbook)**.
-2. **Then install** the **[Chrome extension](https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec)**.
+1. **Install** the **[Chrome extension](https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec)**.
+1. **Copy** the following commands into **[`🔣 termina`](https://support.google.com/chromebook/thread/565904)**:
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-developer-setup/master/setup.sh)"
+```
+
+Yggdrasil is not connected to the network yet. [Public peers](https://github.com/yggdrasil-network/public-peers) can be added manually but [be aware of security implications](https://yggdrasil-network.github.io/faq.html#will-my-machine-be-exposed-to-other-users-of-the-network) if you open local ports.
 
 ## Test
 
