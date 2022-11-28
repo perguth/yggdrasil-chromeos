@@ -12,3 +12,7 @@ The **extension icon** is **clickable** (next to the URL input field) and **togg
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-developer-setup/master/setup.sh)"
 ```
+
+Yggdrasil is not connected to any peers or the Yggdrasil public network yet!
+
+Peers can be [added manually](https://yggdrasil-network.github.io/configuration.html#manually-connecting-to-peers). Public peers can be found [here](https://github.com/yggdrasil-network/public-peers). But [be aware](https://yggdrasil-network.github.io/faq.html#will-my-machine-be-exposed-to-other-users-of-the-network) that open ports will be visible to the connected network.
