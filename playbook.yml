@@ -1,6 +1,6 @@
 ---
 
-- name: 'This will compute a while. Good read: https://mafinto.sh/blog/'
+- name: 'Installing'
   hosts: localhost
   connection: local
 
