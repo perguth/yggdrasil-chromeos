@@ -19,11 +19,6 @@
         update_cache: no
     - name: '[Yggdrasil] Install'
       apt: update_cache=yes name=yggdrasil
-    - name: '[Yggdrasil] Enable and start service'
-      systemd:
-        name: yggdrasil
-        enabled: yes
-        state: started
     - name: '[Yggdrasil] Clean up `/etc/yggdrasil.conf`'
       shell: sed '/^[[:blank:]]*#/d;s/#.*//' /etc/yggdrasil.conf | sudo tee /etc/yggdrasil.conf > /dev/null
       args:
@@ -33,6 +28,11 @@
         path: /etc/privoxy/config
         regexp: 'IfName: auto'
         replace: 'IfName: ygg0'
+    - name: '[Yggdrasil] Enable and start service'
+      systemd:
+        name: yggdrasil
+        enabled: yes
+        state: restarted
 
   - block: # Firewall
     - name: '[Firewall] Prevent incoming traffic'
