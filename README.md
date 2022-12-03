@@ -22,4 +22,6 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/yggdrasil-chrome
    - Peers must be [added manually](https://yggdrasil-network.github.io/configuration.html#manually-connecting-to-peers).
    - Public peers can be found [here](https://github.com/yggdrasil-network/public-peers).
 
+## Usage
+
 Public services available on the Yggdrasil Network can be found [here](https://yggdrasil-network.github.io/services.html).
