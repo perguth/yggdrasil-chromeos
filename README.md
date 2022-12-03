@@ -2,7 +2,7 @@
 
 > This **install script** and **Chrome extension** allows for **access** to the **[Yggdrasil Network](https://yggdrasil-network.github.io/)** ([`0200::/7`](https://yggdrasil-network.github.io/2018/07/28/addressing.html)) on Chrome OS.
 
-Yggdrasil will run inside Linux and Chrome will get access through the Chrome extension and a proxy server.
+Yggdrasil will run inside Linux and the Chome browser will get access through the Chrome extension and a local proxy server.
 
 ## Install
 
