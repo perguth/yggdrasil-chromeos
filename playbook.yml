@@ -28,6 +28,18 @@
       shell: sed '/^[[:blank:]]*#/d;s/#.*//' /etc/yggdrasil.conf | sudo tee /etc/yggdrasil.conf > /dev/null
       args:
         warn: false
+    - name: '[Yggdrasil] Rename interface'
+      replace:
+        path: /etc/privoxy/config
+        regexp: 'IfName: auto'
+        replace: 'IfName: ygg0'
+
+  - block: # Firewall
+    - name: '[Firewall] Prevent incoming traffic'
+      ufw:
+        rule: deny
+        interface: ygg0
+        direction: in
 
   - block: # Privoxy
     - name: '[Privoxy] Install and set up for https://github.com/perguth/yggdrasil-chromeos'
