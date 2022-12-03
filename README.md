@@ -8,7 +8,7 @@ This setup script will:
 
 - Add Yggdrasil repositories and install it using the package manager
 - Rename the Yggrasil interface to `ygg0` and clean up the config file
-- Block incoming traffic over the interface via [UFW](https://manpages.ubuntu.com/manpages/bionic/en/man8/ufw.8.html)
+- Block incoming traffic over the Yggdrasil interface via [UFW](https://manpages.ubuntu.com/manpages/bionic/en/man8/ufw.8.html)
 
 ## Install
 
