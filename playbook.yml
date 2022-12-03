@@ -37,6 +37,7 @@
   - block: # Firewall
     - name: '[Firewall] Prevent incoming traffic'
       ufw:
+        state: enabled
         rule: deny
         interface: ygg0
         direction: in
