@@ -27,7 +27,7 @@
       replace:
         path: /etc/privoxy/config
         regexp: 'IfName: auto'
-        replace: 'IfName: ygg0'
+        replace: 'IfName: ygg'
     - name: '[Yggdrasil] Enable and start service'
       systemd:
         name: yggdrasil
@@ -39,7 +39,7 @@
       ufw:
         state: enabled
         rule: deny
-        interface: ygg0
+        interface: ygg
         direction: in
 
   - block: # Privoxy
