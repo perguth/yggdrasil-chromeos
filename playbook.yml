@@ -48,7 +48,7 @@
         state: enabled
         rule: deny
         interface: ygg
-        direction: in
+        direction: incoming
 
   - block: # Privoxy
     - name: '[Privoxy] Install and set up for https://github.com/perguth/yggdrasil-chromeos'
