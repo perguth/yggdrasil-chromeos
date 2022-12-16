@@ -19,10 +19,17 @@
         update_cache: no
     - name: '[Yggdrasil] Install'
       apt: update_cache=yes name=yggdrasil
+    - name: '[Yggdrasil] Check if config is new'
+      lineinfile:
+        name: /etc/yggdrasil.conf
+        line: '# Maximum Transmission Unit (MTU)'
+      check_mode: yes
+      register: config_state
     - name: '[Yggdrasil] Clean up `/etc/yggdrasil.conf`'
       shell: sed '/^[[:blank:]]*#/d;s/#.*//' /etc/yggdrasil.conf | sudo tee /etc/yggdrasil.conf > /dev/null
       args:
         warn: false
+      when: not (config_state is changed)
     - name: '[Yggdrasil] Rename interface'
       replace:
         path: /etc/privoxy/config
