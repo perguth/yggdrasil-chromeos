@@ -26,7 +26,7 @@
       check_mode: yes
       register: config_state
     - name: '[Yggdrasil] Clean up `/etc/yggdrasil.conf`'
-      shell: sed '/^[[:blank:]]*#/d;s/#.*//' /etc/yggdrasil.conf | sudo tee /etc/yggdrasil.conf > /dev/null
+      shell: sed '/^[[:blank:]]*#/d;s/#.*//' /etc/yggdrasil.conf | tee /etc/yggdrasil.conf > /dev/null
       args:
         warn: false
       when: not (config_state is changed)
@@ -35,6 +35,7 @@
         path: /etc/privoxy/config
         regexp: 'IfName: auto'
         replace: 'IfName: ygg'
+      when: not (config_state is changed)
     - name: '[Yggdrasil] Enable and start service'
       systemd:
         name: yggdrasil
