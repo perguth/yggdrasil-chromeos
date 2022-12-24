@@ -41,6 +41,18 @@
         enabled: yes
         state: restarted
 
+  - block: # Wake up service
+    - name: '[Wake-up-service] Create ensure-is-up script'
+      copy:
+        source: ensure-yggdrasil-is-up.service
+        dest: /etc/systemd/system/ensure-yggdrasil-is-up.service
+    - name: '[Wake-up-service] Enable and start script'
+      systemd:
+        daemon_reload: true
+        enabled: true
+        state: started
+        name: ensure-yggdrasil-is-up
+
   - block: # Firewall
     - name: '[Firewall] Prevent incoming traffic'
       ufw:
