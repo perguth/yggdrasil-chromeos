@@ -8,6 +8,7 @@ This setup script will:
 
 - **Add Yggdrasil repositories and install** it using the package manager
 - Rename the Yggrasil interface to `ygg0` and clean up the config file
+- Ensure Yggdrasil starts after the system wakes from sleep
 - **Block incoming traffic** over the Yggdrasil interface via [UFW](https://manpages.ubuntu.com/manpages/bionic/en/man8/ufw.8.html)
 - Install a proxy server so that the accompanying [Chrome extension](https://chrome.google.com/webstore/detail/yggdrasil-on-chromeos/hcgljgobhoaeojnhikfmnhdpmgbmflec) can allow browser-access to the connected Yggdrasil Network
 
