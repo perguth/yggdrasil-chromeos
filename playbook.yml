@@ -50,7 +50,7 @@
       systemd:
         daemon_reload: true
         enabled: true
-        state: started
+        state: restarted
         name: ensure-yggdrasil-is-up
 
   - block: # Firewall
