@@ -44,7 +44,7 @@
   - block: # Wake up service
     - name: '[Wake-up-service] Create service file'
       copy:
-        source: ./ensure-yggdrasil-is-up.service
+        src: ensure-yggdrasil-is-up.service
         dest: /etc/systemd/system/ensure-yggdrasil-is-up.service
     - name: '[Wake-up-service] Enable and start script'
       systemd:
