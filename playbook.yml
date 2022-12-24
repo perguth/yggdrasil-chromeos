@@ -42,9 +42,9 @@
         state: restarted
 
   - block: # Wake up service
-    - name: '[Wake-up-service] Create ensure-is-up script'
+    - name: '[Wake-up-service] Create service file'
       copy:
-        source: ensure-yggdrasil-is-up.service
+        source: ./ensure-yggdrasil-is-up.service
         dest: /etc/systemd/system/ensure-yggdrasil-is-up.service
     - name: '[Wake-up-service] Enable and start script'
       systemd:
