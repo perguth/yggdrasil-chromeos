@@ -22,6 +22,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-yggdras
 3. **Add peers**:
    - Peers must be [added manually](https://yggdrasil-network.github.io/configuration.html#manually-connecting-to-peers).
    - Public peers can be found [here](https://github.com/yggdrasil-network/public-peers).
+   - [Be aware](https://yggdrasil-network.github.io/faq.html#will-my-machine-be-exposed-to-other-users-of-the-network) that open ports will be visible to the connected network.
 
 ## Usage
 
