@@ -10,7 +10,7 @@ This setup script will:
 - Rename the Yggrasil interface to `ygg0` and clean up the config file
 - Ensure Yggdrasil starts after the system wakes from sleep
 - **Block incoming traffic** over the Yggdrasil interface via [UFW](https://manpages.ubuntu.com/manpages/bionic/en/man8/ufw.8.html)
-- Install a proxy server so that the accompanying [Chrome extension](https://chrome.google.com/webstore/detail/yggdrasil-on-chromeos/hcgljgobhoaeojnhikfmnhdpmgbmflec) can provide browser-access to the connected Yggdrasil network
+- Install a proxy server so that the accompanying [Chrome extension](https://chrome.google.com/webstore/detail/yggdrasil-on-chromeos/hcgljgobhoaeojnhikfmnhdpmgbmflec) can provide browser access
 
 ## Install
 
