@@ -58,7 +58,7 @@
       ufw:
         state: enabled
         rule: deny
-        interface: ygg
+        interface: ygg0
         direction: in
 
   - block: # Privoxy
