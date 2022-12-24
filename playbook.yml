@@ -46,7 +46,7 @@
       copy:
         src: ensure-yggdrasil-is-up.service
         dest: /etc/systemd/system/ensure-yggdrasil-is-up.service
-    - name: '[Wake-up-service] Enable and start script'
+    - name: '[Wake-up-service] Enable and start service'
       systemd:
         daemon_reload: true
         enabled: true
