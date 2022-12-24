@@ -35,11 +35,10 @@
         path: /etc/privoxy/config
         regexp: 'IfName: auto'
         replace: 'IfName: ygg0'
-    - name: '[Yggdrasil] Enable and start service'
+    - name: '[Yggdrasil] Enable service'
       systemd:
         name: yggdrasil
         enabled: yes
-        state: restarted
 
   - block: # Wake up service
     - name: '[Wake-up-service] Create service file'
