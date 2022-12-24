@@ -34,7 +34,7 @@
       replace:
         path: /etc/privoxy/config
         regexp: 'IfName: auto'
-        replace: 'IfName: ygg'
+        replace: 'IfName: ygg0'
     - name: '[Yggdrasil] Enable and start service'
       systemd:
         name: yggdrasil
