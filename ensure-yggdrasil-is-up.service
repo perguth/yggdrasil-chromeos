@@ -13,9 +13,10 @@ RestartSec=1
 ExecStart=/bin/bash -c '\
   while true; do \
     if ip a show ygg0 up 2>/dev/null | grep "inet6.*global" | wc -c >/dev/null; then \
+      echo Waking up Yggdrasil. \
       service yggdrasil restart; \
     fi; \
-    sleep 4; \
+    sleep 10; \
   done \
 '
 
