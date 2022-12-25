@@ -1,4 +1,4 @@
-# On Chrome OS Yggdrasil does not wake up with the system.
+# On ChromeOS Yggdrasil does not wake up with the system.
 # Systemd is also not aware of system wake-ups.
 # Hooking into the ususal wake-up targets does not work: https://gist.github.com/perguth/6d8ac12e655f693e2c4dc377763d08f2/6f7e0389c689967a01f269dae123b9e49f894ef7
 # This script "wakes" Yggdrasil by ensuring it's up by regularly querying `ip`.
