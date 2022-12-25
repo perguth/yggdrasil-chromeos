@@ -8,8 +8,6 @@ Description=Ensure Yggdrasil is connected by cyclically checking if the interfac
 
 [Service]
 Type=simple
-Restart=on-failure
-RestartSec=1
 ExecStart=/bin/bash -c '\
   while true; do \
     if ip a show ygg0 up 2>/dev/null | grep inet6.*global | wc -c >/dev/null; then \
