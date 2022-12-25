@@ -11,10 +11,11 @@ Type=simple
 ExecStart=/bin/bash -c '\
   while true; do \
     if ip a show ygg0 up 2>/dev/null | grep inet6.*global | wc -c >/dev/null; then \
-      echo Waking up Yggdrasil.; \
-      service yggdrasil restart; \
+      sleep 10; \
+      continue; \
     fi; \
-    sleep 10; \
+    echo Waking up Yggdrasil.; \
+    service yggdrasil restart; \
   done \
 '
 
