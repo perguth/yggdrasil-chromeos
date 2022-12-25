@@ -4,7 +4,8 @@
 # This script "wakes" Yggdrasil by ensuring it's up by regularly querying `ip`.
 
 [Unit]
-Description=Ensure Yggdrasil is connected by cyclically checking if the interface exists.
+Description=Ensure Yggdrasil is connected by cyclically checking if the interface exists
+Documentation=https://github.com/perguth/chromeos-yggdrasil-network-setup
 
 [Service]
 Type=simple
