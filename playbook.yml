@@ -39,6 +39,7 @@
       systemd:
         name: yggdrasil
         enabled: yes
+        state: started
 
   - block: # Wake up service
     - name: '[Wake-up-service] Create service file'
