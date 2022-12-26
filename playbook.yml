@@ -32,7 +32,7 @@
       when: not (config_state is changed)
     - name: '[Yggdrasil] Rename interface'
       replace:
-        path: /etc/privoxy/config
+        path: /etc/yggdrasil.conf
         regexp: 'IfName: auto'
         replace: 'IfName: ygg0'
     - name: '[Yggdrasil] Enable service'
