@@ -11,7 +11,7 @@ Documentation=https://github.com/perguth/chromeos-yggdrasil-network-setup
 Type=simple
 ExecStart=/bin/bash -c '\
   while true; do \
-    if ip a show ygg0 up 2>/dev/null | grep inet6.*global | wc -c >/dev/null; then \
+    if ip a show ygg0 up 2>/dev/null | grep inet6.*global >/dev/null; then \
       sleep 10; \
       continue; \
     fi; \
