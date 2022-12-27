@@ -49,10 +49,10 @@
         dest: /etc/systemd/system/ensure-yggdrasil-is-up.service
     - name: '[Wake-up-service] Enable and start service'
       systemd:
+        name: ensure-yggdrasil-is-up
         daemon_reload: true
         enabled: true
-        state: restarted
-        name: ensure-yggdrasil-is-up
+        state: started
 
   - block: # Firewall
     - name: '[Firewall] Prevent incoming traffic'
