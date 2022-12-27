@@ -17,6 +17,7 @@ ExecStart=/bin/bash -c '\
     fi; \
     echo Waking up Yggdrasil.; \
     service yggdrasil restart; \
+    sleep 60; \
   done \
 '
 
