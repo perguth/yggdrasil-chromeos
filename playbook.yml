@@ -55,12 +55,11 @@
         state: started
 
   - block: # Firewall
+    - name: '[Firewall] Install UFW'
+      apt: name=ufw
     - name: '[Firewall] Prevent incoming traffic'
       ufw:
         state: enabled
-        rule: deny
-        interface: ygg0
-        direction: in
 
   - block: # Privoxy
     - name: '[Privoxy] Install and set up for https://chrome.google.com/webstore/detail/yggdrasil-on-chromeos/hcgljgobhoaeojnhikfmnhdpmgbmflec'
