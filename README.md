@@ -33,4 +33,4 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-yggdras
 
 Linux needs to run for this to work. The browser extension icon is clickable and switches browser access to Yggdrasil on and off.
 
-Public services available on the Yggdrasil Network can be found [here](https://yggdrasil-network.github.io/services.html).
+Public services available on the Yggdrasil Network can be [found here](https://yggdrasil-network.github.io/services.html).
