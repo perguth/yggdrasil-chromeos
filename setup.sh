@@ -1,7 +1,9 @@
 #!/bin/sh
 
+NAME=chromeos-yggdrasil-network-setup
+
 # Clean up
-trap "cd .. && rm -rf chromeos-yggdrasil-network-setup" EXIT
+trap "cd .. && rm -rf $NAME" EXIT
   
 # Temporary bugfix as of `02/28/2020`
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13
@@ -12,8 +14,8 @@ echo 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' | sudo te
 sudo apt update && sudo apt install -y ansible
 
 # Clone repository
-git clone https://github.com/perguth/chromeos-yggdrasil-network-setup.git
-cd chromeos-yggdrasil-network-setup
+git clone https://github.com/perguth/$NAME.git
+cd $NAME
 
 # Run playbook
 ansible-playbook playbook.yml
