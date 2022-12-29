@@ -11,7 +11,7 @@ This setup script will:
 - Cleans up the config file (backup placed in ...)
 - Ensure Yggdrasil starts after the system wakes up from sleep
 - **Block incoming traffic** via [UFW](https://manpages.ubuntu.com/manpages/bionic/en/man8/ufw.8.html)
-- Install a proxy server so that the [**Chrome extension**](https://chrome.google.com/webstore/detail/yggdrasil-on-chromeos/hcgljgobhoaeojnhikfmnhdpmgbmflec) can provide browser access
+- Install a proxy server so that the accompanying [**Chrome extension**](https://chrome.google.com/webstore/detail/yggdrasil-on-chromeos/hcgljgobhoaeojnhikfmnhdpmgbmflec) can provide browser access
 
 ## Install
 
