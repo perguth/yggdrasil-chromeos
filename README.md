@@ -24,12 +24,12 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-yggdras
    - Peers must be [added manually](https://yggdrasil-network.github.io/configuration.html#manually-connecting-to-peers).
    - Public peers can be found [here](https://github.com/yggdrasil-network/public-peers).
 
-## Related
-
-- **[Yggdrasil Protected Group](https://github.com/perguth/yggdrasil-protected-group)** - Sync Yggdrasil Peers, AllowedPublicKeys and whitelist IPs via UFW
-
 ## Usage
 
 - Linux needs to run for this to work.
 - The browser extension icon is clickable and switches browser access to Yggdrasil on and off.
 - Public services available on the Yggdrasil Network can be [found here](https://yggdrasil-network.github.io/services.html).
+
+## Related
+
+- **[Yggdrasil Protected Group](https://github.com/perguth/yggdrasil-protected-group)** - Sync Yggdrasil Peers, AllowedPublicKeys and whitelist IPs via UFW
