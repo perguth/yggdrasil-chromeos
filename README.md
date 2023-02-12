@@ -31,5 +31,5 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-yggdras
 
 ## Related
 
-- **[Yggdrasil Protected Group](https://github.com/perguth/yggdrasil-protected-group)**\
+- **[Protected Group](https://github.com/perguth/yggdrasil-protected-group)**\
   Sync Yggdrasil Peers, AllowedPublicKeys and whitelist IPs via UFW
