@@ -2,15 +2,13 @@
 
 > This **install script** and **Chrome extension** allows for **access** to the **[Yggdrasil Network](https://yggdrasil-network.github.io/)** ([`0200::/7`](https://yggdrasil-network.github.io/2018/07/28/addressing.html)) on ChromeOS.
 
-Yggdrasil will run inside Linux and the Chome browser will get access through the Chrome extension and a local proxy server.
-
 This setup script will:
 
 - **Add Yggdrasil repositories and install** it using the package manager
 - **Rename** the Yggrasil **interface to `ygg0`**
 - **Clean** up the **config** file
 - Ensure Yggdrasil **starts after** the system wakes up from **sleep**
-- Install a proxy server so that the accompanying [**Chrome extension**](https://chrome.google.com/webstore/detail/yggdrasil-on-chromeos/hcgljgobhoaeojnhikfmnhdpmgbmflec) can provide browser access
+- Install a local proxy server so that the accompanying [**Chrome extension**](https://chrome.google.com/webstore/detail/yggdrasil-on-chromeos/hcgljgobhoaeojnhikfmnhdpmgbmflec) can provide browser access
 
 ## Install
 
