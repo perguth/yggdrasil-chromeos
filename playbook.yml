@@ -22,7 +22,7 @@
     - name: '[Yggdrasil] Check if config is new'
       lineinfile:
         name: /etc/yggdrasil.conf
-        line: '# Maximum Transmission Unit (MTU)'
+        line: '# List of connection strings for outbound peer connections in URI format,'
       check_mode: yes
       register: config_state
     - name: '[Yggdrasil] Clean up `/etc/yggdrasil.conf`'
