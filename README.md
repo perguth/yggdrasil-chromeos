@@ -1,4 +1,4 @@
-# Access Yggdrasil on ChromeOS
+# ChromeOS Yggdrasil Network setup
 
 > This **install script** and **Chrome extension** allows for **access** to the **[Yggdrasil Network](https://yggdrasil-network.github.io/)** ([`0200::/7`](https://yggdrasil-network.github.io/2018/07/28/addressing.html)) on ChromeOS.
 
