@@ -4,11 +4,9 @@
 
 This setup script will:
 
-- **Add Yggdrasil repositories and install** it using the package manager
-- **Rename** the Yggrasil **interface to `ygg0`**
-- **Clean** up the **config** file
-- Ensure Yggdrasil **starts after** the system wakes up from **sleep**
-- Install a local proxy server so that the accompanying [**Chrome extension**](https://chrome.google.com/webstore/detail/yggdrasil-on-chromeos/hcgljgobhoaeojnhikfmnhdpmgbmflec) can provide browser access
+- **Install** [Yggstack](https://github.com/yggdrasil-network/yggstack)
+- **Add** a [public peer](https://ygg.thingylabs.io/)
+- **Set up** systemd service for Yggstack
 
 ## Install
 
@@ -17,17 +15,9 @@ This setup script will:
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-yggdrasil-network-setup/master/setup.sh)"
 ```
-3. **Add peers**:
-   - Peers must be [added manually](https://yggdrasil-network.github.io/configuration.html#manually-connecting-to-peers).
-   - Public peers can be found [here](https://github.com/yggdrasil-network/public-peers).
 
 ## Usage
 
 - Linux needs to run for this to work.
 - The browser extension icon is clickable and switches browser access to Yggdrasil on and off.
 - Public services available on the Yggdrasil Network can be [found here](https://yggdrasil-network.github.io/services.html).
-
-## Related
-
-- **[Yggdrasil Protected Group](https://github.com/perguth/yggdrasil-protected-group)**\
-  Sync Yggdrasil Peers, AllowedPublicKeys and whitelist IPs via UFW

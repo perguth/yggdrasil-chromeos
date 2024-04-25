@@ -9,7 +9,7 @@ function FindProxyForURL (url, host) {
   // If not resolvable send to proxy
   // The proxy respects /etc/hosts
   if (!ip) {
-    return 'PROXY localhost:8008;'
+    return 'SOCKS5 127.0.0.1:1080;'
   }
 
   // Do not proxy IPv4 addresses
@@ -17,9 +17,9 @@ function FindProxyForURL (url, host) {
     return 'DIRECT;'
   }
 
-  // Use proxy when within Yggdrasils '0200::/7' address range 
+  // Use proxy when within Yggdrasils '0200::/7' address range
   if ('200' <= ip && ip <= '3ff:ffff:ffff:ffff:ffff:ffff:ffff:ffff') {
-    return 'PROXY localhost:8008;'
+    return 'SOCKS5 127.0.0.1:1080;'
   }
 
   return 'DIRECT;'

@@ -8,61 +8,46 @@
   tasks:
 
   - block: # Yggdrasil Network
-    - name: '[Yggdrasil] Add GPG key'
-      apt_key:
-        url: https://neilalexander.s3.dualstack.eu-west-2.amazonaws.com/deb/key.txt
-        id: 569130E8CA20FBC4CB3FDE555898470A764B32C9
-    - name: '[Yggdrasil] Add repository'
-      apt_repository:
-        repo: deb http://neilalexander.s3.dualstack.eu-west-2.amazonaws.com/deb/ debian yggdrasil
-        filename: yggdrasil
-        update_cache: no
-    - name: '[Yggdrasil] Install'
-      apt: update_cache=yes name=yggdrasil
-    - name: '[Yggdrasil] Check if config is new'
-      lineinfile:
-        name: /etc/yggdrasil.conf
-        line: '  # List of connection strings for outbound peer connections in URI format,'
-      check_mode: yes
-      register: config_state
-    - name: '[Yggdrasil] Clean up `/etc/yggdrasil.conf`'
-      shell: sed '/^[[:blank:]]*#/d;s/#.*//' /etc/yggdrasil.conf | tee /etc/yggdrasil.conf > /dev/null
-      args:
-        warn: false
-      when: not (config_state is changed)
-    - name: '[Yggdrasil] Rename interface'
+    - name: Get DEB architecture
+      shell: dpkg --print-architecture
+      register: deb_architecture
+    - name: Download Yggstack
+      get_url:
+        url: "https://github.com/yggdrasil-network/yggstack/releases/download/trunk/yggstack-linux-{{ deb_architecture.stdout }}"
+        dest: /usr/local/bin/yggstack
+        mode: u=rwx,g=rx,o=rx
+    - name: See if the config file exists
+      stat:
+        path: /etc/yggdrasil/yggdrasil.conf
+      register: config_exists
+    - name: Create the config file
+      file:
+        path: "{{ item.path }}"
+        state: "{{ item.state }}"
+        mode: u=rwx,g=rx,o=
+      loop:
+        - { path: /etc/yggdrasil, state: directory }
+        - { path: /etc/yggdrasil/yggdrasil.conf, state: touch }
+      when: not config_exists.stat.exists
+    - name: Generate config
+      shell: /usr/local/bin/yggstack -genconf > /etc/yggdrasil/yggdrasil.conf
+      when: not config_exists.stat.exists
+    - name: Add uplink
       replace:
-        path: /etc/yggdrasil.conf
-        regexp: 'IfName: auto'
-        replace: 'IfName: ygg0'
-    - name: '[Yggdrasil] Enable service'
-      systemd:
-        name: yggdrasil
-        enabled: yes
-        state: started
+        path: /etc/yggdrasil/yggdrasil.conf
+        regexp: 'Peers: \[\]'
+        replace: 'Peers: [tls://ygg-uplink.thingylabs.io:443]'
+      when: not config_exists.stat.exists
 
-  - block: # Wake up service
-    - name: '[Wake-up-service] Create service file'
+  - block: # Install systemd service
+    - name: 'Create systemd service file'
       copy:
         force: true
-        src: ensure-yggdrasil-is-up.service
-        dest: /etc/systemd/system/ensure-yggdrasil-is-up.service
-    - name: '[Wake-up-service] Enable and start service'
+        src: yggstack.service
+        dest: /etc/systemd/system/yggstack.service
+    - name: 'Enable and start service'
       systemd:
-        name: ensure-yggdrasil-is-up
+        name: yggstack
         daemon_reload: true
         enabled: true
         state: started
-
-  - block: # Privoxy
-    - name: '[Privoxy] Install and set up for https://chrome.google.com/webstore/detail/yggdrasil-on-chromeos/hcgljgobhoaeojnhikfmnhdpmgbmflec'
-      apt: update_cache=yes state=present name=privoxy
-    - name: '[Privoxy] Change port to :8008'
-      replace:
-        path: /etc/privoxy/config
-        regexp: '8118'
-        replace: '8008'
-    - name: '[Privoxy] Restart service'
-      systemd:
-        name: privoxy
-        state: restarted

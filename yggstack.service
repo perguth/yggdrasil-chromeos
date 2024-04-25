@@ -1,0 +1,12 @@
+[Unit]
+Description=Yggstack
+
+[Service]
+Type=simple
+ProtectSystem=strict
+ProtectHome=tmpfs
+ReadWriteDirectories=/var/run/
+ExecStart=/usr/local/bin/yggstack -socks 127.0.0.1:1080 -useconffile /etc/yggdrasil/yggdrasil.conf
+
+[Install]
+WantedBy=multi-user.target
