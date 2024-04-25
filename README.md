@@ -13,7 +13,7 @@ This setup script will:
 1. **Install** the **[Chrome extension](https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec)**
 1. **Copy** the following commands into **[`🔣 termina`](https://support.google.com/chromebook/thread/565904)**:
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-yggdrasil-network-setup/master/setup.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/yggdrasil-chromeos/master/setup.sh)"
 ```
 
 ## Usage
