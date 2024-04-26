@@ -19,7 +19,7 @@ Here's what each part does:
    - **Via Chrome Web Store:**\
      Install the extension directly from the Chrome Web Store by following this link: [Chrome Web Store Link](https://chromewebstore.google.com/detail/yggdrasil-on-chromeos/hcgljgobhoaeojnhikfmnhdpmgbmflec).
    - **Or via Manual Installation:**\
-     Download the repository from GitHub and load the extension ('chrome-extension/') unpacked in your Chrome browser.
+     Download the repository from GitHub and load the extension (subfolder `chrome-extension/`) unpacked in your Chrome browser.
 2. **Setup script:**\
    Open a terminal and execute:
    ```
