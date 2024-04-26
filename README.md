@@ -10,7 +10,7 @@ The setup script will:
 
 The Chrome extension will:
 
-- **Proxy** requests through Yggstack
+- **Proxy** relevant requests through Yggstack
 
 ## Install
 
