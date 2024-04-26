@@ -1,28 +1,34 @@
 # Yggdrasil Network ChromeOS setup
 
-> This **install script** and **Chrome extension** allows for **access** to the **[Yggdrasil Network](https://yggdrasil-network.github.io/)** ([`0200::/7`](https://yggdrasil-network.github.io/2018/07/28/addressing.html)) on ChromeOS.
+> This package provides a Chrome extension and a setup script designed to enable ChromeOS users to access the [Yggdrasil Network](https://yggdrasil-network.github.io/) ([`0200::/7`](https://yggdrasil-network.github.io/2018/07/28/addressing.html)).
 
-The setup script will:
+Here's what each part does:
 
-- **Install** [Yggstack](https://github.com/yggdrasil-network/yggstack)
-- **Add** a [public peer](https://ygg.thingylabs.io/)
-- **Set up** systemd service for Yggstack
+**Setup Script:**
+- **Installs Yggstack:** Sets up Yggstack on your device, essential for connecting to the Yggdrasil Network.
+- **Adds a Public Peer:** Connects to a public peer for network access.
+- **Configures a systemd Service for Yggstack:** Ensures Yggstack runs automatically at startup.
 
-The Chrome extension will:
-
-- **Proxy** relevant requests through Yggstack
+**Chrome Extension:**
+- **Routes Specific Network Requests:** Adjusts your browser settings to channel certain network requests through Yggstack, securing your access to the Yggdrasil Network.
+- **Toggle Switch:** The extension icon allows you to easily switch your browser's connection to Yggstack on or off.
 
 ## Install
 
-1. **Install** the **[Chrome extension](https://chrome.google.com/webstore/detail/yggdrasil-via-%60localhost8/hcgljgobhoaeojnhikfmnhdpmgbmflec)**
-1. **Copy** the following into a terminal:
-```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/yggdrasil-chromeos/master/setup.sh)"
-```
+1. **Chrome Extension**:
+   - **Via Chrome Web Store:**\
+     Install the extension directly from the Chrome Web Store by following this link: [Chrome Web Store Link](https://chromewebstore.google.com/detail/yggdrasil-on-chromeos/hcgljgobhoaeojnhikfmnhdpmgbmflec).
+   - **Or via Manual Installation:**\
+     Download the repository from GitHub and load the extension ('chrome-extension/') unpacked in your Chrome browser.
+2. **Setup script:**\
+   Open a terminal and execute:
+   ```
+   bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/yggdrasil-chromeos/master/setup.sh)"
+   ```
 
 ## Usage
+- Linux (Beta) needs to be active on your ChromeOS for the setup to function.
+- Use the extension icon to control your access to the network.
+- Start exploring the Yggdrasil Network through services like ⚡ [ygg-only.thingylabs.io](https://ygg-only.thingylabs.io/).
 
-- Linux needs to run for this to work.
-- The browser extension icon is clickable and switches browser access to Yggdrasil on and off.
-- Public services available on the Yggdrasil Network can be [found here](https://yggdrasil-network.github.io/services.html).
-- You can start here: ⚡ [ygg-only.thingylabs.io](https://ygg-only.thingylabs.io)
+This setup offers a simple way for ChromeOS users to access and navigate the decentralized, secure Yggdrasil Network with minimal configuration.
