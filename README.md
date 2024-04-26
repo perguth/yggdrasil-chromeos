@@ -12,12 +12,12 @@ Here's how this works:
 
 ## Install
 
-1. **Chrome Extension**:
+1. **Install Chrome extension**:
    - **Via Chrome Web Store:**\
      Install the extension directly from the Chrome Web Store by following this link: [Chrome Web Store](https://chromewebstore.google.com/detail/yggdrasil-on-chromeos/hcgljgobhoaeojnhikfmnhdpmgbmflec).
    - **Or via Manual Installation:**\
      Download the repository from GitHub and load the extension (subfolder `chrome-extension/`) "unpacked" in your Chrome browser.
-2. **Setup script:**\
+2. **Run setup script:**\
    Open a terminal and execute:
    ```
    bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/yggdrasil-chromeos/master/setup.sh)"
