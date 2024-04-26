@@ -1,17 +1,14 @@
-# Yggdrasil Network ChromeOS setup
+# Yggdrasil Network ChromeOS/Linux setup
 
-> This package provides a Chrome extension and a setup script designed to enable ChromeOS users to access the [Yggdrasil Network](https://yggdrasil-network.github.io/) ([`0200::/7`](https://yggdrasil-network.github.io/2018/07/28/addressing.html)).
+> This package provides a Chrome extension and a setup script designed to enable ChromeOS users to access the [Yggdrasil Network](https://yggdrasil-network.github.io/) ([`0200::/7`](https://yggdrasil-network.github.io/2018/07/28/addressing.html)). Also works on Debian/Ubuntu.
 
-Here's what each part does:
+Here's how this works:
 
-**Setup Script:**
-- **Installs Yggstack:** Sets up Yggstack on your device, essential for connecting to the Yggdrasil Network.
-- **Adds a Public Peer:** Connects to a public peer for network access.
-- **Configures a systemd Service for Yggstack:** Ensures Yggstack runs automatically at startup.
-
-**Chrome Extension:**
-- **Routes Specific Network Requests:** Adjusts your browser settings to channel certain network requests through Yggstack, securing your access to the Yggdrasil Network.
-- **Toggle Switch:** The extension icon allows you to easily switch your browser's connection to Yggstack on or off.
+1. 𝗬𝗴𝗴𝘀𝘁𝗮𝗰𝗸 𝗜𝗻𝘀𝘁𝗮𝗹𝗹𝗮𝘁𝗶𝗼𝗻:
+   - The accompanying GitHub script installs Yggstack on your ChromeOS device. Yggstack acts as a local proxy server set to listen on port 1080. It is configured to automatically start as a systemd service, ensuring it runs in the background without user intervention.
+2. 𝗖𝗵𝗿𝗼𝗺𝗲 𝗘𝘅𝘁𝗲𝗻𝘀𝗶𝗼𝗻:
+   - The extension modifies Chrome's network settings to direct internet traffic from addresses within the Yggdrasil network range (0200::/7) through the Yggstack proxy. This rerouting is key to accessing the network securely and efficiently.
+   - A toggle icon in the browser toolbar provides a user interface to activate or deactivate the proxy functionality of the extension.
 
 ## Install
 
@@ -27,7 +24,7 @@ Here's what each part does:
    ```
 
 ## Usage
-- Linux (Beta) needs to be active on your ChromeOS for the setup to function.
+- Linux needs to be active on your ChromeOS for the proxy to work.
 - Use the extension icon to control your access to the network.
 - Start exploring the Yggdrasil Network through services like ⚡ [ygg-only.thingylabs.io](https://ygg-only.thingylabs.io/).
 
