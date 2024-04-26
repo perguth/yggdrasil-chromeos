@@ -36,7 +36,10 @@
       replace:
         path: /etc/yggdrasil/yggdrasil.conf
         regexp: 'Peers: \[\]'
-        replace: 'Peers: [tls://ygg-uplink.thingylabs.io:443]'
+        replace: |-
+          Peers: [
+            tls://ygg-uplink.thingylabs.io:443
+          ]
       when: not config_exists.stat.exists
 
   - block: # Install systemd service
