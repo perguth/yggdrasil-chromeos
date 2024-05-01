@@ -1,6 +1,6 @@
 #!/bin/sh
 
-NAME=chromeos-yggdrasil-network-setup
+NAME=yggdrasil-chromeos
 
 # Clean up
 trap "cd .. && rm -rf $NAME" EXIT
