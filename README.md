@@ -5,7 +5,7 @@
 Here's how this works:
 
 1. 𝗬𝗴𝗴𝘀𝘁𝗮𝗰𝗸 𝗜𝗻𝘀𝘁𝗮𝗹𝗹𝗮𝘁𝗶𝗼𝗻:
-   - The accompanying GitHub script installs Yggstack on your ChromeOS device. Yggstack acts as a local proxy server set to listen on port 1080. It is configured to automatically start as a systemd service, ensuring it runs in the background without user intervention.
+   - The accompanying GitHub script installs Yggstack on your ChromeOS device. Yggstack acts as a local proxy server set to listen on port 1080. It is configured to automatically start as a systemd service, ensuring it runs in the background without user intervention and will connect to the Yggdrasil Network through [ygg.thingylabs.io](https://ygg.thingylabs.io/).
 2. 𝗖𝗵𝗿𝗼𝗺𝗲 𝗘𝘅𝘁𝗲𝗻𝘀𝗶𝗼𝗻:
    - The extension modifies Chrome's network settings to direct internet traffic from addresses within the Yggdrasil network range (0200::/7) through the Yggstack proxy. This rerouting is key to accessing the network securely and efficiently.
    - A toggle icon in the browser toolbar provides a user interface to activate or deactivate the proxy functionality of the extension.
