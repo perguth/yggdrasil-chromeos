@@ -6,8 +6,6 @@ NAME=chromeos-yggdrasil-network-setup
 trap "cd .. && rm -rf $NAME" EXIT
 
 # Install Ansible
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
-echo 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' | sudo tee /etc/apt/sources.list.d/ansible.list
 sudo apt update && sudo apt install -y ansible
 
 # Clone repository
