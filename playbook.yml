@@ -13,7 +13,7 @@
       register: deb_architecture
     - name: Download Yggstack
       get_url:
-        url: "https://github.com/yggdrasil-network/yggstack/releases/download/trunk/yggstack-linux-{{ deb_architecture.stdout }}"
+        url: "https://github.com/yggdrasil-network/yggstack/releases/latest/download/yggstack-linux-{{ deb_architecture.stdout }}-static"
         dest: /usr/local/bin/yggstack
         mode: u=rwx,g=rx,o=rx
     - name: See if the config file exists
