@@ -39,6 +39,7 @@
         replace: |-
           Peers: [
             tls://ygg-uplink.thingylabs.io:443
+            tls://yggdrasil.neilalexander.dev:64648?key=ecbbcb3298e7d3b4196103333c3e839cfe47a6ca47602b94a6d596683f6bb358
           ]
       when: not config_exists.stat.exists
 
