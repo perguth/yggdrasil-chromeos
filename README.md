@@ -16,6 +16,8 @@ Here's how this works:
 
 ## Install
 
+> *Note: On Linux you should be able to just simply use [YggStack](https://github.com/yggdrasil-network/yggstack) and not deal with a Chrome Extension.*
+
 1. **Install Chrome extension**:
    - **Via Chrome Web Store:**\
      Install the extension directly from the Chrome Web Store by following this link: [Chrome Web Store](https://chromewebstore.google.com/detail/yggdrasil-on-chromeos/hcgljgobhoaeojnhikfmnhdpmgbmflec).
